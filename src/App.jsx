@@ -44,59 +44,60 @@ function App() {
     } group-hover:text-slate-200`;
 
   return (
-    <div className="flex min-h-screen max-w-[1300px] flex-row mx-auto gap-50 mt-20 ">
-        <div className="left sticky top-20 self-start">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-5xl font-bold">Remigio Jayzon</h1>
-            <p className="text-2xl">Frontend developers</p>
-            <p className="w-96 font-medium text-[#6a7ca0]">
-              Creo y optimizo experiencias digitales impactantes, accesibles y de
-              alto nivel para la web.
-            </p>
-          </div>
+    <div className="flex flex-col lg:flex-row min-h-screen max-w-[1300px] mx-auto gap-8 lg:gap-50 mt-8 lg:mt-20 px-4 sm:px-8">
+      {/* Sidebar / Topbar */}
+      <div className="left w-full lg:w-auto lg:sticky lg:top-20 self-start flex flex-col lg:gap-0 gap-8">
+        <div className="flex flex-col gap-3 items-center lg:items-start text-center lg:text-left">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Remigio Jayzon</h1>
+          <p className="text-lg sm:text-xl lg:text-2xl">Frontend developers</p>
+          <p className="w-full max-w-xs lg:w-96 font-medium text-[#6a7ca0]">
+            Creo y optimizo experiencias digitales impactantes, accesibles y de alto nivel para la web.
+          </p>
+        </div>
 
-          <nav className="nav hidden lg:block" aria-label="In-page jump links">
-            <ul className="mt-16 w-max">
-              <li>
-                <a className="group flex items-center py-3" href="#about">
-                  <span className={getIndicatorClasses("about")}></span>
-                  <span className={getNavTextClasses("about")}>About</span>
-                </a>
-              </li>
-              <li>
-                <a className="group flex items-center py-3" href="#experience">
-                  <span className={getIndicatorClasses("experience")}></span>
-                  <span className={getNavTextClasses("experience")}>
-                    Experience
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a className="group flex items-center py-3" href="#projects">
-                  <span className={getIndicatorClasses("projects")}></span>
-                  <span className={getNavTextClasses("projects")}>Projects</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        {/* Navigation */}
+        <nav className="nav w-full flex justify-center lg:block" aria-label="In-page jump links">
+          <ul className="mt-8 lg:mt-16 w-max flex flex-row lg:flex-col gap-2 lg:gap-0">
+            <li>
+              <a className="group flex items-center py-2 lg:py-3" href="#about">
+                <span className={getIndicatorClasses("about")}></span>
+                <span className={getNavTextClasses("about")}>About</span>
+              </a>
+            </li>
+            <li>
+              <a className="group flex items-center py-2 lg:py-3" href="#experience">
+                <span className={getIndicatorClasses("experience")}></span>
+                <span className={getNavTextClasses("experience")}>Experience</span>
+              </a>
+            </li>
+            <li>
+              <a className="group flex items-center py-2 lg:py-3" href="#projects">
+                <span className={getIndicatorClasses("projects")}></span>
+                <span className={getNavTextClasses("projects")}>Projects</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-        <div className="flex fixed bottom-20 self-end gap-4 mt-16"> 
-          <a href="https://github.com/Jeyson-Sr" target="_blank">
+        {/* Social Icons */}
+        <div className="flex justify-center lg:justify-start gap-4 mt-8 lg:mt-16 mb-4 lg:mb-0">
+          <a href="https://github.com/Jeyson-Sr" target="_blank" rel="noopener noreferrer">
             <GitHubIcon ancho={24} alto={24} color={"#6a7ca0"} />
           </a>
-          <a href="https://www.linkedin.com/in/jeyson-sr" target="_blank">
+          <a href="https://www.linkedin.com/in/jeyson-sr" target="_blank" rel="noopener noreferrer">
             <LinkendinIcon ancho={24} alto={24} color={"#6a7ca0"} />
           </a>
-          <a href="https://codepen.io/tu_usuario" target="_blank">
+          <a href="https://codepen.io/tu_usuario" target="_blank" rel="noopener noreferrer">
             <CodePenIcon ancho={24} alto={24} color={"#6a7ca0"} />
           </a>
-          <a href="https://www.instagram.com/jhosep.js/" target="_blank">
+          <a href="https://www.instagram.com/jhosep.js/" target="_blank" rel="noopener noreferrer">
             <InstagramIcon ancho={24} alto={24} color={"#6a7ca0"} />
           </a>
         </div>
       </div>
 
-      <main className="right flex-1 flex flex-col gap-40">
+      {/* Main Content */}
+      <main className="right flex-1 flex flex-col gap-24 lg:gap-40 mx-auto">
         {/* scroll-mt-20 compensa el espacio del sticky */}
         <section
           id="about"

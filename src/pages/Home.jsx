@@ -14,7 +14,7 @@ function StrongHighlight({ children }) {
 
 function Home() {
   return (
-    <div className="max-w-[750px] text-[#6a7ca0]">
+    <div className="max-w-[750px] text-[#6a7ca0] mx-auto">
   <p className="mb-4">
     ¡Hola! Soy <StrongHighlight>Jayzon</StrongHighlight>, un desarrollador full stack con enfoque en frontend, 
     dedicado a crear aplicaciones web claras, funcionales y de alto rendimiento. Me apasiona ofrecer experiencias 
