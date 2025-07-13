@@ -8,7 +8,7 @@ export function Puesto({ año, cargo, empresa, descripcion, tecnologias }) {
         <h3 className="text-lg font-semibold">
           {cargo} · {empresa}
         </h3>
-        <p className="text-gray-300">{descripcion}</p>
+        <p className="text-gray-300 whitespace-pre-line">{descripcion}</p>
         <ul className="flex flex-wrap gap-2">
           {tecnologias.map((tech) => (
             <li
